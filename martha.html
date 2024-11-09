@@ -9,20 +9,219 @@
     <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css
 " rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+
 </head>
-</html>
-<nav>
+<body>
+
+    <main id="main">
+        <div class="container">
+            <header>
+                <h4>Martha Cooper</h4>
+                <h3>Martha Cooper y su importancia en la historia del graffiti</h3>
+            </header>
+        </div>
     
-    <a href="index.html">Inicio</a>
-    <a href="historia.html">Historia NY</a>
-    <a href="intro.html">Introducción</a>
-    <a href="fotos.html">Fotografía</a>
-    <a href="wc.html">whole Cars</a>
-    <a href="escritores.html">Escritores</a>
-    <a href="personajes.html">personajes</a>
-    <a href="spots.html">Spots</a>
-    <a href="personajes.html">personajes</a>
-    <a href="martha.html">Martha Cooper</a>
-    <a href="henry.html">Henry Chalfant</a>
+            <div class="full-width-image">
+                <img src="fotomartha.jpg" alt="Descripción de la imagen">
+            </div>
+
+            <div class="container">
+                <h6>¿Quien fue Martha Cooper?</h6>
+            </div>
     
-    </nav>
+            <div class="container">
+            <header>
+                <p>Martha Cooper nació en 1943 y es una de las fotógrafas más influyentes en la historia del graffiti. A lo largo de su carrera, ha documentado la cultura urbana de Nueva York, capturando el auge del graffiti en las calles y en los trenes de la ciudad. Sus imágenes, tomadas con una perspectiva única y humana, ayudaron a dar visibilidad al graffiti como una forma legítima de arte y cultura. Además de su trabajo en Subway Art, Cooper ha publicado varios libros y su legado ha sido fundamental en la preservación de la historia del graffiti.</p>
+            </header>
+    
+            <section class="image-description-section">
+                <div class="custom-container-c">
+                  <div class="custom-row">
+                    <!-- Imagen 1 -->
+                    <div class="col-md-4">
+                      <div class="image-box">
+                        <img src="marimg3.jpg" alt="Imagen 1" class="img-fluid">
+                        <p class="image-description">Martha Cooper en la actualidad.</p>
+                      </div>
+                    </div>
+                    
+                    <!-- Imagen 2 -->
+                    <div class="col-md-4">
+                      <div class="image-box">
+                        <img src="marimg6.jpg" alt="Imagen 2" class="img-fluid">
+                        <p class="image-description">Martha Cooper junto a una de sus famosas fotos en la calle.</p>
+                      </div>
+                    </div>
+                    
+                    <!-- Imagen 3 -->
+                    <div class="col-md-4">
+                      <div class="image-box">
+                        <img src="marimg2.jpg" alt="Imagen 3" class="img-fluid">
+                        <p class="image-description">Martha Cooper junto al graffiti donde fue retratada.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+       
+              <div class="grid-layout">
+                <!-- Lado Izquierdo para Texto -->
+                <div class="left-content">
+                    <h5>Eventos de Martha Cooper</h5>
+                    <mi-parrafo>Martha Cooper ha recorrido el mundo presentando Subway Art, compartiendo su experiencia y la historia detrás de este icónico libro que documenta los inicios del graffiti en Nueva York. En sus charlas y exposiciones, Cooper habla sobre el impacto cultural de las imágenes que capturó junto a Henry Chalfant, así como sobre la energía y el talento de los jóvenes artistas que desafiaron las normas al llenar los trenes de color y estilo. Estas presentaciones han permitido que Subway Art alcance nuevas generaciones, consolidándolo como una referencia esencial en la historia del arte urbano. A través de sus exposiciones en galerías, museos y festivales de graffiti, Cooper ha dado a conocer el legado del movimiento y ha mostrado cómo el graffiti, alguna vez un acto clandestino y rebelde, se transformó en una forma de arte reconocida globalmente.
+
+</mi-parrafo>
+                   
+                  </div>
+
+
+                <!-- Lado Derecho para Imágenes -->
+                <div class="right-content">
+                    <div class="large-image">
+                        <img src="marimg4.jpg" alt="Imagen rectangular superior">
+                    </div>
+                   
+                    <div class="large-image">
+                        <img src="marimg5.jpg" alt="Imagen rectangular superior">
+                    </div>
+                    <div class="large-image">
+                        <img src="marimg7.jpg" alt="Imagen rectangular superior">
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+        <h6>Martha Cooper y sus primeros trabajos fotográficos</h6>
+    </div>
+
+        <div class="carousel-container">
+       <div class="slider">
+                <div class="slider--inner">
+                    <div class="slide">
+                        <img src="mar1.jpg" alt="Imagen 1">
+                        <p class="description">Martha Cooper con Flash de foto</p>
+                    </div>
+                    <div class="slide">
+                        <img src="mar2.jpeg" alt="Imagen 2">
+                        <p class="description">Martha Cooper interactuando con su cámara y niños</p>
+                    </div>
+                    <div class="slide">
+                        <img src="mar3.jpg" alt="Imagen 3">
+                        <p class="description">Martha y su cámara nikon</p>
+                    </div>
+                    <div class="slide">
+                        <img src="mar4.jpg" alt="Imagen 4">
+                        <p class="description">Registro de la realidad de Brooklin por Martha</p>
+                    </div>
+                    <div class="slide">
+                        <img src="mar5.jpg" alt="Imagen 5">
+                        <p class="description">Foto de niños jugando a trepar la reja</p>
+                    </div>
+                    <div class="slide">
+                        <img src="mar6.jpg" alt="Imagen 6">
+                        <p class="description">Martha Cooper interactuando con su cámara y niños</p>
+                    </div>
+                </div>
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+        </div>
+
+    <div id="menu"></div>
+
+    <script>
+        // Carga el archivo de menú y lo inserta en el div con id "menu"
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("menu").innerHTML = data;
+            })
+            .catch(error => console.error("Error al cargar el menú:", error));
+
+            fetch("menu.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("menu").innerHTML = data;
+
+            // Identifica la página actual según la URL
+            const currentPage = window.location.pathname.split("/").pop();
+            const activeLink = document.querySelector(`a[href="${currentPage}"]`);
+            
+            // Agrega la clase "active" al enlace de la página actual
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+        })
+        .catch(error => console.error("Error al cargar el menú:", error));
+
+ </script>
+
+<div class="video-container">
+    <!-- Contenedor de la miniatura del video -->
+    <a href="https://www.youtube.com/watch?v=xz1JqCiDpVo" target="_blank">
+        <img src="https://img.youtube.com/vi/xz1JqCiDpVo/hqdefault.jpg" alt="Título del Video" class="video-thumbnail">
+    </a>
+    <!-- Contenedor de la descripción -->
+    <div class="video-info">
+        <h3>NMartha Cooper Entrevista Subway Art 1984 Graffiti</h3>
+        <p>Imágenes raras de una entrevista de Martha Cooper, siempre humilde y positiva, compartiendo su opinión sobre el graffiti el 29 de junio de 1984, sobre si el graffiti es arte o vandalismo. En esa época, el movimiento hip-hop comenzaba a recibir más atención mediática, y sus principales protagonistas empezaban a obtener ingresos por lo que, solo unos años antes, era una práctica hecha solo por el amor a hacerlo. Los clubes y la escena artística de Manhattan ya se estaban dando cuenta, y películas como *Beat Street* y *Breakdance* ayudaron a que el resto del mundo no se quedara atrás.</p>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="inner">
+        <div class="footer-container">
+            <!-- Sección del formulario a la izquierda -->
+            <section class="form-section">
+                <h2>Regístrate</h2>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field half">
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                        </div>
+                        <div class="field half">
+                            <input type="email" name="email" id="email" placeholder="Email" />
+                        </div>
+                        <div class="field">
+                            <textarea name="comentario" id="comentario" placeholder="Comentario"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Enviar" class="primary" /></li>
+                    </ul>
+                </form>
+            </section>
+            <!-- Sección de redes sociales a la derecha -->
+            <section class="social-section">
+                <h2>Redes sociales</h2>
+                <div class="fields">
+                    <div class="field">
+                        <a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+                    </div>
+                    <div class="field">
+                        <a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+                    </div>
+                    <div class="field">
+                        <a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+                    </div>
+                    <div class="field">
+                        <a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+                    </div>
+                    <div class="field">
+                        <a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</footer>
+
+<script src="carousel.js"></script>
+
+   
+</body>
+    </html>

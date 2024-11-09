@@ -9,131 +9,271 @@
     <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css
 " rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
-</html>
-<nav>
-    
-    <a href="index.html">Inicio</a>
-    <a href="historia.html">Historia NY</a>
-    <a href="intro.html">Introducción</a>
-    <a href="fotos.html">Fotografía</a>
-    <a href="wc.html">whole Cars</a>
-    <a href="escritores.html">Escritores</a>
-    <a href="personajes.html">personajes</a>
-    <a href="spots.html">Spots</a>
-    <a href="personajes.html">personajes</a>
-    <a href="martha.html">Martha Cooper</a>
-    <a href="henry.html">Henry Chalfant</a>
-    
-    </nav>
+    <link rel="stylesheet" href="menu.css">
 
-    <div id="main">
+    <style>
+        /* Estilos para la pantalla de bienvenida */
+        #welcomeScreen {
+            position: fixed; /* Fija la pantalla a toda la vista */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Fondo completamente negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Asegura que la pantalla esté sobre el contenido */
+        }
+
+        #welcomeImage {
+            cursor: pointer; /* Hace que la imagen sea clickeable */
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        /* Estilos para el contenido principal, oculto inicialmente */
+        #main, #menu, #footer {
+            display: none; /* Ocultamos el contenido, menú y footer por defecto */
+        }
+    </style>
+</head>
+
+<body>
+
+     <!-- Pantalla de bienvenida que aparece al cargar la página -->
+     <div id="welcomeScreen">
+        <img src="Pantallabienvenida.jpg" alt="Bienvenida" id="welcomeImage">
+    </div>
+
+    <div id="menu"></div>
+
+    <script>
+       fetch("menu.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("menu").innerHTML = data;
+                const currentPage = window.location.pathname.split("/").pop();
+                const activeLink = document.querySelector(`a[href="${currentPage}"]`);
+                if (activeLink) activeLink.classList.add("active");
+            })
+            .catch(error => console.error("Error al cargar el menú:", error));
+
+        
+    document.addEventListener("DOMContentLoaded", () => {
+        const welcomeScreen = document.getElementById("welcomeScreen");
+        const mainContent = document.getElementById("main");
+        const menu = document.getElementById("menu");
+        const footer = document.getElementById("footer");
+
+        // Verifica si el usuario ya ha visto la pantalla de bienvenida
+        let hasSeenWelcome = sessionStorage.getItem("hasSeenWelcome");
+
+        if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+            // Si el usuario ya ha visto la pantalla de bienvenida, muestra el contenido directamente
+            if (hasSeenWelcome) {
+                welcomeScreen.style.display = "none";
+                mainContent.style.display = "block";
+                menu.style.display = "block";
+                footer.style.display = "block";
+            } else {
+                // Si no la ha visto, muestra la pantalla de bienvenida y oculta el contenido
+                mainContent.style.display = "none";
+                menu.style.display = "none";
+                footer.style.display = "none";
+
+                document.getElementById("welcomeImage").addEventListener("click", () => {
+                    // Oculta la pantalla de bienvenida y muestra el contenido
+                    welcomeScreen.style.display = "none";
+                    mainContent.style.display = "block";
+                    menu.style.display = "block";
+                    footer.style.display = "block";
+                    // Marca que el usuario ya ha visto la bienvenida en la sesión
+                    sessionStorage.setItem("hasSeenWelcome", "true");
+                });
+            }
+        } else {
+            // En las demás páginas, muestra el contenido desde el inicio
+            mainContent.style.display = "block";
+            menu.style.display = "block";
+            footer.style.display = "block";
+        }
+    });
+</script>
+
+
+<div id="main">
         <div class="container">
             <header>
-                <h1>SUBWAY ART by <a href=https://en.wikipedia.org/wiki/Subway_Art>Martha Cooper and Henry Chalfant</a>.</h1>
-                <p>Un recorrido visual por el graffiti del metro de Nueva York, capturado por Martha Cooper y Henry Chalfant en los años 80</p>
+                <h1>SUBWAY ART</h1>
+                    <h3><a href=https://en.wikipedia.org/wiki/Subway_Art>Martha Cooper and Henry Chalfant</a>.</h3>
+                    <p class="description">Un recorrido visual por el graffiti del metro de Nueva York, capturado por Martha Cooper y Henry Chalfant en los años 80</p>
             </header>
             <section class="tiles">
+
                 <article class="style1">
-                    <span class="image">
-                        <img src="foto1.jpg" alt="" />
-                    </span>
                     <a href="historia.html">
+                    <span class="image">
+                        <img src="foto1.jpg" alt="Foto de historia New York" />
+                    </span>
                         <h2>Historia New York</h2>
                         <div class="content">
-                            <p>Como inició la cultura del graffiti en los años 80 en New York.</p>
+                            <p1>Como inició la cultura del graffiti en los años 80 en New York.</p1>
                         </div>
                     </a>
                 </article>
+
                 <article class="style2">
-                    <span class="image">
-                        <img src="images/pic02.jpg" alt="" />
-                    </span>
                     <a href="intro.html">
+                    <span class="image">
+                        <img src="foto4.jpg" alt="" />
+                    </span>
                         <h2>Introducción</h2>
                         <div class="content">
-                            <p>Impacto en la ciudad, y la importancia de la documentación visual de la historia.</p>
+                            <p1>Impacto en la ciudad, y la importancia de la documentación visual de la historia.</p1>
                         </div>
                     </a>
+              
                 </article>
                 <article class="style3">
+                    <a href="fotos.html">
                     <span class="image">
                         <img src="foto2.jpg" alt="" />
                     </span>
-                    <a href="fotos.html">
                         <h2>Fotografías</h2>
                         <div class="content">
-                            <p>Algunas de las fotografías más importantes que han trascendido con los años en la cultura urbana.</p>
+                            <p1>Algunas de las fotografías más importantes que han trascendido con los años en la cultura urbana.</p1>
                         </div>
                     </a>
                 </article>
+
                 <article class="style4">
-                    <span class="image">
-                        <img src="images/pic04.jpg" alt="" />
-                    </span>
                     <a href="escritores.html">
+                    <span class="image">
+                        <img src="foto5.jpg" alt="" />
+                    </span>
                         <h2>Escritores</h2>
                         <div class="content">
-                            <p>Conoce a algunos de los nombres más reconocidos de la época.</p>
+                            <p1>Conoce a algunos de los nombres más reconocidos de la época.</p1>
                         </div>
                     </a>
                 </article>
+
                 <article class="style5">
-                    <span class="image">
-                        <img src="images/pic05.jpg" alt="" />
-                    </span>
                     <a href="personajes.html">
+                    <span class="image">
+                        <img src="foto9.jpg" alt="" />
+                    </span>
                         <h2>Personajes</h2>
                         <div class="content">
-                            <p>Recopilación de personajes en trenes, cada uno con distintos colores y estilos.</p>
+                            <p1>Recopilación de personajes en trenes, cada uno con distintos colores y estilos.</p1>
                         </div>
                     </a>
                 </article>
+
                 <article class="style6">
-                    <span class="image">
-                        <img src="images/pic06.jpg" alt="" />
-                    </span>
                     <a href="wc.html">
+                    <span class="image">
+                        <img src="foto8.jpeg" alt="" />
+                    </span>
                         <h2>Whole Cars</h2>
                         <div class="content">
-                            <p>Vagones pintados por completo, aquí encontrarás algunos de los graffitis más grandes de la época.</p>
+                            <p1>Vagones pintados por completo, aquí encontrarás algunos de los graffitis más grandes de la época.</p1>
                         </div>
                     </a>
                 </article>
+
                 <article class="style2">
-                    <span class="image">
-                        <img src="images/pic07.jpg" alt="" />
-                    </span>
                     <a href="spots.html">
+                    <span class="image">
+                        <img src="foto7.jpg" alt="" />
+                    </span>
                         <h2>Spots</h2>
                         <div class="content">
-                            <p>Conoce como eran los lugares donde los escritores entraban para poder pintar.</p>
+                            <p1>Conoce como eran los lugares donde los escritores entraban para poder pintar.</p1>
                         </div>
                     </a>
                 </article>
+
                 <article class="style3">
-                    <span class="image">
-                        <img src="images/pic08.jpg" alt="" />
-                    </span>
                     <a href="martha.html">
+                    <span class="image">
+                        <img src="foto3.jpg" alt="" />
+                    </span>
                         <h2>Martha Cooper</h2>
                         <div class="content">
-                            <p>Biografía de la fotógrafa Martha Cooper y su trayectoria dentro del mundo del graffiti.</p>
+                            <p1>Biografía de la fotógrafa Martha Cooper y su trayectoria dentro del mundo del graffiti.</p1>
                         </div>
                     </a>
                 </article>
+
                 <article class="style1">
-                    <span class="image">
-                        <img src="images/pic09.jpg" alt="" />
-                    </span>
                     <a href="henry.html">
+                    <span class="image">
+                        <img src="foto6.jpg" alt="" />
+                    </span>
                         <h2>Henry Chalfant</h2>
                         <div class="content">
-                            <p>Biografía del fotógrafo Henry Chalfant y su destacado trabajo por la cultura hip hop.</p>
+                            <p1>Biografía del fotógrafo Henry Chalfant y su destacado trabajo por la cultura hip hop.</p1>
                         </div>
                     </a>
                 </article>
-                
+           
             </section>
         </div>
     </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="footer-container">
+                <!-- Sección del formulario a la izquierda -->
+                <section class="form-section">
+                    <h2>Regístrate</h2>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                            </div>
+                            <div class="field half">
+                                <input type="email" name="email" id="email" placeholder="Email" />
+                            </div>
+                            <div class="field">
+                                <textarea name="comentario" id="comentario" placeholder="Comentario"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Enviar" class="primary" /></li>
+                        </ul>
+                    </form>
+                </section>
+                <!-- Sección de redes sociales a la derecha -->
+                <section class="social-section">
+                    <h2>Redes sociales</h2>
+                    <div class="fields">
+                        <div class="field">
+                            <a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+                        </div>
+                        <div class="field">
+                            <a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+                        </div>
+                        <div class="field">
+                            <a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+                        </div>
+                        <div class="field">
+                            <a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+                        </div>
+                        <div class="field">
+                            <a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="carousel.js"></script>
+  
+
+</body>
+</html>

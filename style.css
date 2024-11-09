@@ -4,6 +4,18 @@ img{ max-width: 100%;
 
 }
 
+header {
+    text-align: left; /* Asegura que todo el contenido dentro del header esté alineado a la izquierda */
+}
+
+header .descripcion {
+    margin: 10px 0; /* Agrega un margen vertical */
+    text-align: left; /* Asegura que el texto dentro de p esté alineado a la izquierda */
+    line-height: 1.5; /* Mejora la legibilidad */
+    font-size: 16px; /* Establece un tamaño de fuente adecuado */
+}
+
+
 body {
     background-color: rgba(207, 207, 207, 0.811);
     font-family: "Arvo", sans-serif;
@@ -19,3 +31,732 @@ body {
 max-width: 1000px;
 margin-inline: auto;
 }
+
+.active {
+    font-size: 1.2em; /* Cambia el tamaño o el estilo a tu preferencia */
+    font-weight: bold;
+    color: #007bff; /* Cambia el color para hacer notar la diferencia */
+}
+
+/* menu.css */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000; /* Asegura que esté encima del contenido */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px; /* Ajusta el espacio entre los elementos */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 10px 15px;
+}
+
+.menu a.active {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000; /* Asegura que el menú esté al frente de otros elementos */
+    margin-bottom: 15px; /* Ajusta este valor según el espacio que desees */
+}
+
+/* Estilo para los enlaces del menú */
+nav ul {
+    display: flex; /* Hace que los elementos se alineen horizontalmente */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* Cambia el color del enlace al pasar el ratón */
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Clase para el enlace activo */
+.active {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Añade margen superior al contenido para evitar que quede cubierto por el menú fijo */
+body {
+    padding-top: 70px; /* Ajusta este valor según la altura del menú más el margen */
+}
+
+p{
+    margin-top: 10PX;
+    font-size: 12pt;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1{
+    margin-top: 10%;
+    margin-bottom: 30px;
+    font-size: 36pt;
+    text-shadow: 2px 2px 4px rgba(125, 125, 125, 0.5);
+    text-align: center;
+}
+
+h2{
+    margin-top: 5%;
+    margin-bottom: 10px; 
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h3{
+    margin-top: 2%;
+    margin-bottom: 30px;
+    font-size: 24pt;
+    text-align: center;
+    font-style: italic;
+}
+
+h4{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 38pt;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+
+/* Efecto en las imágenes */
+.tiles article .image img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Al pasar el cursor sobre el artículo */
+.tiles article:hover .image img {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+    opacity: 0.5; /* Cambia la opacidad para dar un efecto de "filtro" */
+}
+
+/* Efecto en los títulos */
+.tiles article h2 {
+    color: #333; /* Color inicial del texto */
+    transition: color 0.3s ease;
+}
+
+/* Cambia el color del título al hacer hover en el artículo */
+.tiles article:hover h2 {
+    color: #007bff; /* Cambia el color del texto al pasar el cursor */
+}
+
+/* Efecto en el fondo del artículo */
+.tiles article {
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Al pasar el cursor sobre el artículo */
+.tiles article:hover {
+    background-color: #eaeaea; /* Cambia el color de fondo */
+    box-shadow: 0 4px 8px rgba(95, 95, 95, 0.2); /* Añade una sombra */
+}
+
+/* Estructura general del footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contenedor del formulario y redes sociales */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilos de la sección del formulario */
+.form-section, .social-section {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.form-section h2, .social-section h2 {
+    margin-bottom: 15px;
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.field.half {
+    flex: 1 1 calc(50% - 10px); /* Acomoda los campos de texto en 50% del ancho */
+}
+
+.field a .label {
+    display: inline; /* Cambia a inline o block si display: none estaba activo */
+    color: #ffffff; /* Cambia este valor al color que prefieras */
+    font-size: 14px; /* Ajusta el tamaño del texto si es necesario */
+    margin-left: 5px; /* Espacio entre el ícono y el nombre */
+}
+
+.field a:hover .label {
+    color: #bababc; /* Color deseado cuando se hace hover */
+}
+
+.field textarea {
+    width: 100%;
+}
+
+.actions {
+    margin-top: 15px;
+}
+
+.actions input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos de la sección de redes sociales */
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.icons a {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.icons a .label {
+    display: none; /* Opcional, oculta las etiquetas de texto */
+}
+
+.full-width-image {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Toma el ancho total de la ventana */
+    overflow: hidden;
+    box-sizing: border-box; 
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arvo', serif;
+}
+    
+.full-width-image img {
+    width: 100%; /* La imagen se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Evita el pequeño espacio blanco debajo de la imagen */
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sección de imagen completa */
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+/* Nueva disposición en dos columnas */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Columna izquierda más pequeña, derecha más grande */
+    gap: 20px; /* Espacio entre columnas */
+    width: 90%; /* Haz que ocupe un 90% del ancho de la pantalla */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+} 
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 40px; /* Espacio entre las columnas */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.left-content {
+    padding: 10px;
+    background-color: #007bff; /* Fondo para la sección de texto */
+    overflow-y: auto;
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    padding: 20px; /* Aumenta el espacio dentro de la columna de texto */
+}
+
+.right-content {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Tres filas en la columna derecha */
+    grid-template-columns: 1fr; /* Una sola columna para las filas */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.large-image img {
+    width: 100%;
+    height: 500%; /* Ajusta la altura del rectángulo grande según lo que necesites */
+    object-fit: cover;
+}
+
+.small-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 10px; /* Espacio entre las imágenes pequeñas */
+}
+
+.small-images img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura de las imágenes pequeñas */
+    object-fit: cover;
+}
+
+.three-images {
+    display: flex;
+    gap: 20px;
+}
+
+.three-images img {
+    width: 33.33%; /* Cada imagen pequeña ocupa el 33.33% */
+    object-fit: cover;
+}
+
+.right-content img {
+    width: 100%; /* Asegura que las imágenes se ajusten al ancho de la columna */
+}
+
+mi-parrafo{
+    margin-top: 10PX;
+    font-size: 12pt;
+    margin-bottom: 180px; 
+    color: #ffffff;
+    display: block; /* Asegura que se comporten como bloques */
+}
+
+h5{
+    margin-top: 10PX;
+    font-size: 18pt;
+    margin-bottom: 30px; 
+    color: #ffffff;
+}
+
+h6{
+    margin-top: 4%;
+    margin-bottom: 30px;
+    font-size: 18pt;
+    text-align: center;
+
+}
+
+.right-content .large-image img {
+    width: 100%;
+    height: 25vh; /* Ajusta el tamaño vertical relativo al viewport */
+    object-fit: cover;
+}
+
+.right-content .small-images img {
+    width: 100%;
+    height: 20vh; /* Ajusta el tamaño vertical para las imágenes pequeñas */
+    object-fit: cover;
+}
+
+/* Centro el carrusel */
+.carousel-container {
+    margin-top: 20PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Configuración del contenedor principal */
+.slider {
+    width: 100%; /* Puede ajustar este ancho según prefieras */
+    max-width: 800px; /* Define un ancho máximo */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Configuración del carrusel interno */
+.slider--inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider--inner img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Cambia esto según el aspecto deseado, por ejemplo 16:9 */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Asegura que la imagen llene el contenedor sin distorsionarse */
+    flex-shrink: 0; /* No permite que las imágenes se reduzcan */
+}
+
+
+/* Botones de navegación */
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.slide {
+    min-width: 100%; /* Cada imagen ocupa el ancho completo del carrusel */
+    box-sizing: border-box;
+    text-align: center; /* Centra la descripción debajo de la imagen */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.description {
+    margin-bottom: 30px; /* O el valor que prefieras */
+    margin-left: 0;  
+}
+
+.video-container {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 900px; /* Ajusta el ancho del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+}
+
+.video-thumbnail {
+    width: 600px; /* Ajusta el tamaño de la miniatura */
+    height: auto;
+    cursor: pointer;
+}
+
+.video-info {
+    background-color: #007bff; /* Color azul para el recuadro */
+    color: #ffffff;
+    padding: 24px;
+    flex: 2;
+    width: 700;
+}
+
+.video-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.video-info p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.large-image-tall {
+    width: 100%;
+    max-width: 600px; /* Ajusta según tus necesidades */
+    margin: 0 auto;
+    height: 300px; /* Define la altura deseada */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+}
+
+.large-image-tall img {
+    width: 100%;
+    height: 100%; /* Ajusta la imagen para llenar el div completamente */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+.small-images-tall {
+    display: flex;
+    gap: 20px; /* Espacio entre las imágenes */
+    max-width: 600px; /* Ajusta según el diseño */
+    margin: 0 auto;
+    height: 200px; /* Altura deseada para el contenedor */
+}
+
+.small-images-tall img {
+    width: 48%; /* Ocupa la mitad del ancho disponible */
+    height: 100%; /* Llenar la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen sin distorsión y recorta si es necesario */
+}
+
+/* Estilos básicos del menú */
+.menu {
+    background-color: #333;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Estilos para pantallas pequeñas */
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        display: none; /* Oculta el menú en pantallas pequeñas */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .menu ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    .menu.show ul {
+        display: flex; /* Muestra el menú cuando se hace clic en el botón */
+    }
+}
+
+.content-container {
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px; /* Añade un pequeño padding alrededor */
+  }
+
+
+ /* Estilos para la imagen */
+ .col-md-5 img {
+    width: 70%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+    max-width: 100%; /* No se desborde */
+    object-fit: cover;
+    height: auto;
+    margin-left: 20px; /* Separa la imagen del texto */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.col-md-6 img {
+    width: 80%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+    max-width: 100%; /* No se desborde */
+    object-fit: cover;
+    height: auto;
+    margin-left: 40px; /* Separa la imagen del texto */
+    margin-right: 40px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para las columnas */
+.col-md-6 {
+    flex: 1; /* Hace que las columnas tengan un tamaño flexible */
+    margin: 0; /* Elimina cualquier margen adicional */
+    padding: 0; /* Elimina cualquier padding adicional */
+    margin-bottom: 20px; /* Añade un espacio entre las columnas en pantallas pequeñas */
+}
+
+.col-md-5 {
+    flex: 1; /* Hace que las columnas tengan un tamaño flexible */
+    margin: 0; /* Elimina cualquier margen adicional */
+    padding: 0; /* Elimina cualquier padding adicional */
+    margin-bottom: 20px; /* Añade un espacio entre las columnas en pantallas pequeñas */
+}
+/* Asegurarse de que las distancias entre texto e imagen sean iguales */
+.row {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    justify-content: space-between; /* Asegura que los elementos se distribuyan uniformemente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando la pantalla sea más pequeña */
+    gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el texto */
+.col-md-6 h2 {
+    font-size: 2rem; /* Tamaño del título */
+    font-weight: bold; /* Pone el título en negrita */
+    color: #333; /* Color del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.col-md-6 p {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.6; /* Mejor legibilidad con mayor espacio entre líneas */
+    color: #555; /* Color gris oscuro para el texto */
+}
+
+.col-md-5 h2 {
+    font-size: 2rem; /* Tamaño del título */
+    font-weight: bold; /* Pone el título en negrita */
+    color: #333; /* Color del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.col-md-5 p {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.6; /* Mejor legibilidad con mayor espacio entre líneas */
+    color: #555; /* Color gris oscuro para el texto */
+}
+
+/* Responsividad para pantallas pequeñas (por debajo de 768px) */
+@media (max-width: 768px) {
+    .row {
+        text-align: center; /* Centra el contenido en pantallas pequeñas */
+    }
+
+    .col-md-6 {
+        margin-bottom: 20px; /* Añade margen debajo de las columnas */
+    }
+
+    .col-md-6 img {
+        margin-bottom: 20px; /* Añade margen debajo de la imagen */
+    }
+}
+
+  .image-description-section {
+    padding: 40px 0; /* Espaciado superior e inferior */
+  }
+  
+  .custom-container-c {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .custom-row {
+    display: flex;
+    flex-direction: column; /* Apila las imágenes verticalmente */
+    gap: 20px; /* Espacio entre imágenes */
+  }
+  
+  .image-box {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .image-description {
+    font-size: 1rem; /* Tamaño de la fuente */
+    color: #333; /* Texto gris oscuro */
+    margin-top: 10px; /* Espacio entre la imagen y la descripción */
+    text-align: left; /* Alineación del texto a la izquierda */
+  }
+  
+  /* Responsividad para pantallas pequeñas (por debajo de 768px) */
+  @media (max-width: 768px) {
+    .col-12 {
+      flex: 0 0 100%; /* Las imágenes ocupan el 100% en pantallas pequeñas */
+    }
+  }
+  

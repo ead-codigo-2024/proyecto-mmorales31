@@ -1,0 +1,25 @@
+<nav class="menu">
+    <button class="menu-toggle">☰</button> <!-- Ícono de hamburguesa para dispositivos móviles -->
+
+    <ul>
+        <li><a href="index.html" id="inicio" >Inicio</a></li>
+        <li><a href="historia.html" id="historia" >Historia New York</a></li>
+        <li><a href="intro.html" id="intro" >Subway Art</a></li>
+        <li><a href="fotos.html" id="fotos" >Fotografías</a></li>
+        <li><a href="wc.html" id="wc" >Wohle Cars</a></li>
+        <li><a href="escritores.html" id="escritores" >Escritores</a></li>
+        <li><a href="spots.html" id="spots" >Spots</a></li>
+        <li><a href="personajes.html" id="personajes" >Personajes</a></li>
+        <li><a href="martha.html" id="martha" >Martha Cooper</a></li>
+        <li><a href="henry.html" id="henry" >Henry Chalfant</a></li>
+
+
+    
+    </ul>
+</nav>
+
+<script>
+    document.querySelector(".menu-toggle").addEventListener("click", function() {
+        document.querySelector(".menu").classList.toggle("show");
+    });
+</script>
